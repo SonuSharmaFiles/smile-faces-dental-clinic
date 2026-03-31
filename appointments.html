@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book your dental appointment online with Smile Faces Dental Clinic. Easy scheduling, same-day emergency slots available.">
+    <title>Book Appointment — Smile Faces Dental Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🦷</div>
+                Smile <span>Faces</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointments.html" class="nav-cta">Book Now</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="label">Appointments</div>
+            <h1>Book Your Visit</h1>
+            <p>Schedule your appointment in minutes. Choose your service, pick a time, and we'll take care of the rest.
+            </p>
+        </div>
+    </section>
+
+    <!-- BOOKING STEPS INDICATOR -->
+    <section class="section">
+        <div class="container">
+            <div class="booking-steps reveal">
+                <div class="step active">
+                    <div class="step-num">1</div>
+                    <span>Select Service</span>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <span>Choose Time</span>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <span>Your Details</span>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <span>Confirm</span>
+                </div>
+            </div>
+
+            <!-- BOOKING FORM -->
+            <div class="booking-form-container glass-card reveal">
+                <form id="appointmentForm">
+                    <!-- Step 1: Service Selection -->
+                    <div class="form-group">
+                        <label for="aptService">Select Service *</label>
+                        <select id="aptService" required>
+                            <option value="">Choose a service...</option>
+                            <option value="checkup">General Checkup & Cleaning</option>
+                            <option value="whitening">Teeth Whitening</option>
+                            <option value="veneers">Veneers Consultation</option>
+                            <option value="braces">Braces / Invisalign</option>
+                            <option value="implant">Dental Implant</option>
+                            <option value="rootcanal">Root Canal Therapy</option>
+                            <option value="extraction">Tooth Extraction</option>
+                            <option value="pediatric">Pediatric Visit</option>
+                            <option value="emergency">Emergency Visit</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Step 2: Date & Time -->
+                    <div class="form-group">
+                        <label for="aptDate">Preferred Date *</label>
+                        <input type="date" id="aptDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Time *</label>
+                        <div class="time-slots">
+                            <button type="button" class="time-slot">9:00 AM</button>
+                            <button type="button" class="time-slot">9:30 AM</button>
+                            <button type="button" class="time-slot">10:00 AM</button>
+                            <button type="button" class="time-slot">10:30 AM</button>
+                            <button type="button" class="time-slot">11:00 AM</button>
+                            <button type="button" class="time-slot">11:30 AM</button>
+                            <button type="button" class="time-slot">1:00 PM</button>
+                            <button type="button" class="time-slot">1:30 PM</button>
+                            <button type="button" class="time-slot">2:00 PM</button>
+                            <button type="button" class="time-slot">2:30 PM</button>
+                            <button type="button" class="time-slot">3:00 PM</button>
+                            <button type="button" class="time-slot">3:30 PM</button>
+                            <button type="button" class="time-slot">4:00 PM</button>
+                            <button type="button" class="time-slot">4:30 PM</button>
+                            <button type="button" class="time-slot">5:00 PM</button>
+                            <button type="button" class="time-slot">5:30 PM</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Personal Info -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="aptFirst">First Name *</label>
+                            <input type="text" id="aptFirst" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aptLast">Last Name *</label>
+                            <input type="text" id="aptLast" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="aptEmail">Email *</label>
+                            <input type="email" id="aptEmail" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aptPhone">Phone *</label>
+                            <input type="tel" id="aptPhone" placeholder="(555) 000-0000" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="aptNotes">Additional Notes</label>
+                        <textarea id="aptNotes"
+                            placeholder="Any special concerns or requests? (e.g., dental anxiety, allergies, etc.)"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent" style="width: 100%; justify-content: center;">Confirm
+                        Booking →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Why Smile Faces</div>
+                <h2>What Makes Us Different</h2>
+            </div>
+            <div class="benefits-grid stagger-children">
+                <div class="glass-card benefit-card reveal">
+                    <div class="icon">⚡</div>
+                    <h4>Same-Day Appointments</h4>
+                    <p>Emergency? Walk-in slots available every day for urgent care.</p>
+                </div>
+                <div class="glass-card benefit-card reveal">
+                    <div class="icon">💳</div>
+                    <h4>Flexible Payment</h4>
+                    <p>Insurance accepted. 0% financing available for major treatments.</p>
+                </div>
+                <div class="glass-card benefit-card reveal">
+                    <div class="icon">🏆</div>
+                    <h4>Award-Winning Care</h4>
+                    <p>Recognized as a top dental practice for 5 consecutive years.</p>
+                </div>
+                <div class="glass-card benefit-card reveal">
+                    <div class="icon">😌</div>
+                    <h4>Anxiety-Free</h4>
+                    <p>Sedation options and a gentle team that puts you at ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">FAQs</div>
+                <h2>Common Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I prepare for my first visit?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bring your insurance card, a valid photo ID, and any previous dental records if available.
+                            Arrive 15 minutes early to complete new patient paperwork. We'll handle the rest!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you accept insurance?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We accept most major dental insurance plans including Delta Dental, Cigna, Aetna,
+                            MetLife, and many more. Contact us to verify your specific plan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I have dental anxiety?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We completely understand. Our team is trained in gentle dentistry techniques, and we offer
+                            nitrous oxide (laughing gas) and oral sedation options. We'll go at your pace — always.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I reschedule or cancel my appointment?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We ask for at least 24 hours' notice for cancellations or reschedules. Just call
+                            us at (555) 123-4567 or email hello@smilefaces.com.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What payment options are available?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept cash, all major credit cards, insurance, and offer 0% financing through CareCredit
+                            for eligible patients. We'll work with you to find the best option.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🦷</div>
+                        Smile <span>Faces</span>
+                    </a>
+                    <p>Providing exceptional dental care with compassion and excellence since 2010. Your smile is our
+                        passion.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">in</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="appointments.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">General Dentistry</a></li>
+                        <li><a href="services.html">Cosmetic Dentistry</a></li>
+                        <li><a href="services.html">Orthodontics</a></li>
+                        <li><a href="services.html">Pediatric Dentistry</a></li>
+                        <li><a href="services.html">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 123 Smile Avenue, New York</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>✉️ hello@smilefaces.com</li>
+                        <li>🕐 Mon-Sat: 8am - 7pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smile Faces Dental Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

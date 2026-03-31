@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with Smile Faces Dental Clinic. Contact us by phone, email, or visit our office in New York.">
+    <title>Contact Us — Smile Faces Dental Clinic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🦷</div>
+                Smile <span>Faces</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointments.html" class="nav-cta">Book Now</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="label">Get In Touch</div>
+            <h1>Contact Us</h1>
+            <p>Have questions or ready to schedule? We'd love to hear from you. Reach out through any of the channels
+                below.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO CARDS -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-cards stagger-children">
+                <div class="glass-card contact-info-card reveal">
+                    <div class="icon-wrap">📍</div>
+                    <h4>Visit Us</h4>
+                    <p>123 Smile Avenue<br>New York, NY 10001</p>
+                </div>
+                <div class="glass-card contact-info-card reveal">
+                    <div class="icon-wrap">📞</div>
+                    <h4>Call Us</h4>
+                    <p>(555) 123-4567<br>Mon-Sat: 8am - 7pm</p>
+                </div>
+                <div class="glass-card contact-info-card reveal">
+                    <div class="icon-wrap">✉️</div>
+                    <h4>Email Us</h4>
+                    <p>hello@smilefaces.com<br>We reply within 24 hours</p>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM & MAP -->
+            <div class="about-story reveal" style="margin-top: var(--space-3xl);">
+                <div class="glass-card" style="padding: var(--space-2xl);">
+                    <h3 style="margin-bottom: var(--space-xl); font-family: var(--font-heading);">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Full Name</label>
+                                <input type="text" id="contactName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number</label>
+                                <input type="tel" id="contactPhone" placeholder="(555) 000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactService">Service Interest</label>
+                                <select id="contactService">
+                                    <option value="">Select a service...</option>
+                                    <option value="general">General Dentistry</option>
+                                    <option value="cosmetic">Cosmetic Dentistry</option>
+                                    <option value="orthodontics">Orthodontics</option>
+                                    <option value="pediatric">Pediatric Dentistry</option>
+                                    <option value="surgery">Oral Surgery</option>
+                                    <option value="emergency">Emergency Care</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" placeholder="Tell us about your needs or questions..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send
+                            Message →</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="glass-card" style="padding: var(--space-2xl); margin-bottom: var(--space-xl);">
+                        <h3 style="margin-bottom: var(--space-lg); font-family: var(--font-heading);">🕐 Office Hours
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div
+                                style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.95rem; padding-bottom: 10px; border-bottom: 1px solid var(--border);">
+                                <span>Monday - Friday</span><span style="color: var(--success); font-weight: 600;">8:00
+                                    AM - 7:00 PM</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.95rem; padding-bottom: 10px; border-bottom: 1px solid var(--border);">
+                                <span>Saturday</span><span style="color: var(--success); font-weight: 600;">9:00 AM -
+                                    5:00 PM</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 0.95rem;">
+                                <span>Sunday</span><span style="color: var(--danger); font-weight: 600;">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card" style="padding: var(--space-2xl);">
+                        <h3 style="margin-bottom: var(--space-lg); font-family: var(--font-heading);">🚨 Emergency?</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: var(--space-lg); line-height: 1.7;">For
+                            dental emergencies outside office hours, call our emergency line. We'll get back to you
+                            within 30 minutes.</p>
+                        <a href="tel:5551234567" class="btn btn-accent"
+                            style="width: 100%; justify-content: center;">Emergency: (555) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAP -->
+            <div class="map-container reveal" style="margin-top: var(--space-3xl);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703166!2d-74.11976389828648!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Clinic Location Map"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🦷</div>
+                        Smile <span>Faces</span>
+                    </a>
+                    <p>Providing exceptional dental care with compassion and excellence since 2010. Your smile is our
+                        passion.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">in</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="appointments.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">General Dentistry</a></li>
+                        <li><a href="services.html">Cosmetic Dentistry</a></li>
+                        <li><a href="services.html">Orthodontics</a></li>
+                        <li><a href="services.html">Pediatric Dentistry</a></li>
+                        <li><a href="services.html">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 123 Smile Avenue, New York</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>✉️ hello@smilefaces.com</li>
+                        <li>🕐 Mon-Sat: 8am - 7pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smile Faces Dental Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
