@@ -3,13 +3,11 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
   injectAdvancedElements();
   initPreloader();
   initHeader();
   initMobileNav();
   initScrollReveal();
-  initCustomCursor();
   init3DTilt();
   initParallax();
   initSmoothScroll();
@@ -184,40 +182,6 @@ function initTimeSlots() {
   });
 }
 
-/* --- Theme Toggle --- */
-function initThemeToggle() {
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  if (savedTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-
-  const navLinks = document.querySelector('.nav-links');
-  if (!navLinks) return;
-
-  const toggleBtn = document.createElement('button');
-  toggleBtn.className = 'theme-toggle';
-  toggleBtn.setAttribute('aria-label', 'Toggle light/dark mode');
-  toggleBtn.innerHTML = `
-    <span class="icon-sun">☀️</span>
-    <span class="icon-moon">🌙</span>
-  `;
-
-  const navCta = navLinks.querySelector('.nav-cta');
-  if (navCta) {
-    navLinks.insertBefore(toggleBtn, navCta);
-  } else {
-    navLinks.appendChild(toggleBtn);
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-}
-
 /* ============================================
    ADVANCED ANIMATIONS LOGIC
    ============================================ */
@@ -239,17 +203,6 @@ function injectAdvancedElements() {
     <div class="ambient-blob blob-3"></div>
   `;
   document.body.prepend(blobContainer);
-
-  // Custom Cursor (Desktop only)
-  const isDesktop = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  if (isDesktop) {
-    const cursorDot = document.createElement('div');
-    cursorDot.className = 'custom-cursor-dot';
-    const cursorOutline = document.createElement('div');
-    cursorOutline.className = 'custom-cursor-outline';
-    document.body.appendChild(cursorDot);
-    document.body.appendChild(cursorOutline);
-  }
 }
 
 /* --- Preloader --- */
@@ -263,34 +216,6 @@ function initPreloader() {
   });
 }
 
-/* --- Custom Cursor --- */
-function initCustomCursor() {
-  const isDesktop = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  if (!isDesktop) return;
-
-  const dot = document.querySelector('.custom-cursor-dot');
-  const outline = document.querySelector('.custom-cursor-outline');
-
-  if (!dot || !outline) return;
-
-  window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    dot.style.left = `${posX}px`;
-    dot.style.top = `${posY}px`;
-
-    setTimeout(() => {
-      outline.style.left = `${posX}px`;
-      outline.style.top = `${posY}px`;
-    }, 60);
-  });
-
-  document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
-    el.addEventListener('mouseenter', () => outline.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => outline.classList.remove('hovering'));
-  });
-}
 
 /* --- 3D Card Tilt --- */
 function init3DTilt() {
