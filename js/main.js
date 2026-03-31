@@ -3,6 +3,7 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   injectAdvancedElements();
   initPreloader();
   initHeader();
@@ -180,6 +181,40 @@ function initTimeSlots() {
       document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
       slot.classList.add('selected');
     });
+  });
+}
+
+/* --- Theme Toggle --- */
+function initThemeToggle() {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  const navLinks = document.querySelector('.nav-links');
+  if (!navLinks) return;
+
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'theme-toggle';
+  toggleBtn.setAttribute('aria-label', 'Toggle light/dark mode');
+  toggleBtn.innerHTML = `
+    <span class="icon-sun">☀️</span>
+    <span class="icon-moon">🌙</span>
+  `;
+
+  const navCta = navLinks.querySelector('.nav-cta');
+  if (navCta) {
+    navLinks.insertBefore(toggleBtn, navCta);
+  } else {
+    navLinks.appendChild(toggleBtn);
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
   });
 }
 
